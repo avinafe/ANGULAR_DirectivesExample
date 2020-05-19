@@ -1,0 +1,11 @@
+<ol>
+    <li *ngFor="let superheroe of superheroes">
+        {{superheroe.name}}
+        <br><span *ngIf="superheroe.alterEgo">alter ego: {{superheroe.alterEgo}}</span>
+        <ul>
+            <li *ngFor="let superheroe of superheroes">
+                {{superheroe.superpowers}}
+            </li>
+        </ul>
+    </li>
+</ol>

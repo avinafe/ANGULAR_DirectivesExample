@@ -1,0 +1,14 @@
+<form>
+    <label for="Name">Enter a superhero name: </label> 
+    <input type="text" name="Name" [(ngModel)]="name"><br>
+</form>
+
+<figure style="width: 30%; margin: auto;" [ngSwitch]="name">
+    <span *ngFor="let superhero of superheroes">
+        <span *ngSwitchCase="superhero.name">
+            <img [src]="superhero.imageUrl" [alt]="superhero.name" style="width:100%">
+            <figcaption><h2>{{superhero.name}}</h2></figcaption>
+        </span> 
+    </span>
+    <span *ngSwitchDefault><h2>Not superhero found</h2></span>
+</figure>
